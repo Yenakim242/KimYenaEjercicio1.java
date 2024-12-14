@@ -42,3 +42,63 @@ Menu AboutMe [nombre del perfil]
 -----------------------------------
 
 
+## Ejercicio1: About Me
+El proyecto About Me es una aplicación interactiva desarrollada en Java, que permite a los usuarios explorar un perfil personal simulado. Este perfil incluye una breve historia, una lista de hobbies, comidas favoritas y datos curiosos. El objetivo principal es practicar el uso de clases, listas dinámicas y menús interactivos para mejorar las habilidades en programación orientada a objetos.
+
+
+## Explicación de la aplicación
+1. Creación de la clase KimYenaPerfil: La clase KimYenaPerfil fue diseñada para representar un perfil de usuario.
+
+    · Atributos privados
+
+        - name: nombre del perfil.
+
+        - story: historia del perfil.
+
+        - hobbies: lista del perfil.
+
+        - foods: lista de comidas favoritas.
+
+        - funFacts: lista de datos curiosos.
+    
+    · Constructor
+
+        - Se inicializó el nombre y la historia del perfil.
+
+        - Las listas (hobbies, foods, funFacts) fueron instanciadas como ArrayList vacíos.
+
+    · Métodos: para recuperar y dar formatos a los datos.
+
+        - getFormattedStory(), getFormattedHobbies(), getFormattedFood().
+
+    Esto permitió encapsular la información del perfil y estructurar el acceso a sus datos.
+
+
+2. Creación de la claseKimYenaEjercicio1Main
+
+    · Creación del objeto perfil: Un objeto de tipo KimYenaPerfil se inicializó con datos reales (tu nombre, historia, hobbies, comidas y fun facts).
+
+    · Interfaz de usuario: Se diseñó un menú interactivo utilizando un bucle while que muestra opciones al usuario:
+
+        - Mostrar la historia del perfil.
+
+        - Mostrar los hobbies y comidas favoritas.
+
+        - Mostrar un dato curioso aleatorio.
+
+        - Salir del programa.
+
+    · Cada opción se gestionó con un switch que llama a los métodos correspondientes del objeto perfil.
+
+    · Entradas no válidas se manejaron con un try-catch para evitar errores y guiar al usuario.
+
+
+3. Uso de Random
+
+La funcionalidad de seleccionar un dato curioso aleatorio se implementó con: new Random().nextInt(lista.size());
+Esto asegura que cada vez que el usuario elige la opción 3, se muestra un dato curioso diferente.
+
+
+4. Código claro y bien organizado
+
+    · Se utiliza un método auxiliar showMenu(String nombre) para mantener el código del menú separado del bucle principal.

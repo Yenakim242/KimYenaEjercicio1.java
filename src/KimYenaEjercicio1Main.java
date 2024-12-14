@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class KimYenaEjercicio1Main {
     public static void main(String[] args) {
-        // Crear un objeto del tipo KimYenaPerfil
+        // Crear un objeto del tipo KimYenaPerfil con nombre y una historia.
         KimYenaPerfil miPerfil = new KimYenaPerfil("Yena Kim", "Soy una desarrolladora web apasioinada por el running y el arte.");
 
         // Añadir información al perfil
@@ -17,11 +17,15 @@ public class KimYenaEjercicio1Main {
         miPerfil.getFunFacts().add("Me gusta producir música y hacer DJ.");
         miPerfil.getFunFacts().add("Soy una apisionada de Pokemon");
 
+        // Crear un objeto Scanner para caputrar la entrada del usuario
         Scanner scanner = new Scanner(System.in);
+        // Variable para controlar el menú
         int option = 0;
 
         // Bucle del menú
+        // El bucle se repite mientras el usuario no elija salir
         while (option != 4) {
+            // Mostrar el menú
             showMenu(miPerfil.getName());
             try {
                 // Leer opción del usuario
@@ -29,9 +33,11 @@ public class KimYenaEjercicio1Main {
 
                 switch (option) {
                     case 1:
+                        // Mostrar la historia del perfil
                         System.out.println(miPerfil.getFormattedStory());
                         break;
                     case 2:
+                        // Mostrar hobbies y comidas favoritas
                         System.out.println(miPerfil.getFormattedHobbies());
                         System.out.println(miPerfil.getFormattedFoods());
                         break;
@@ -48,11 +54,13 @@ public class KimYenaEjercicio1Main {
                         System.out.println("\nOpción no válida. Intenta nuevamente.");
                 }
             } catch (NumberFormatException e) {
+                // Manejar entradas no numéricas
                 System.out.println("\nEntrada no válida. Por favor, introduce un número del 1 al 4.");
             }
             // Separador entre iteraciones
             System.out.println("--------------------------------------\n");
         }
+        // Cerrar el Scanner para liberar recursos
         scanner.close();
     }
     // Mostrar el menú
